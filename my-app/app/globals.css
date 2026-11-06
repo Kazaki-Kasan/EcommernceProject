@@ -1,0 +1,39 @@
+:root {
+  --kdas-cyan: #00b0e0;
+  --kdas-pink: #e12885;
+  --kdas-dark: #12171c;
+  --kdas-surface: #1e252d;
+  --kdas-surface-elevated: #28313b;
+  --kdas-mint: #d3f8d5;
+  --kdas-text: #f0f4f8;
+  --kdas-muted: #9aa7b5;
+  --kdas-border: #2d3844;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  background-color: var(--kdas-dark);
+  color: var(--kdas-text);
+  font-family: Arial, Helvetica, sans-serif;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+*::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}

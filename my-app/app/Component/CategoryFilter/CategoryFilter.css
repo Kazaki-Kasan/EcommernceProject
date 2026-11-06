@@ -1,0 +1,122 @@
+.category-filter-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.category-filter-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.category-tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.filter-tab {
+  background-color: var(--kdas-surface);
+  border: 1px solid var(--kdas-border);
+  color: var(--kdas-muted);
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+  white-space: nowrap;
+}
+
+.filter-tab:hover {
+  color: var(--kdas-text);
+  border-color: var(--kdas-cyan);
+}
+
+.filter-tab.active {
+  background-color: var(--kdas-cyan);
+  color: #0a1015;
+  border-color: var(--kdas-cyan);
+}
+
+.category-controls {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.deals-toggle-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.88rem;
+  color: var(--kdas-text);
+  cursor: pointer;
+}
+
+.deals-checkbox {
+  accent-color: var(--kdas-pink);
+  width: 16px;
+  height: 16px;
+}
+
+.sort-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.sort-label {
+  font-size: 0.82rem;
+  color: var(--kdas-muted);
+}
+
+.sort-select {
+  background-color: var(--kdas-surface);
+  color: var(--kdas-text);
+  border: 1px solid var(--kdas-border);
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  outline: none;
+  cursor: pointer;
+}
+
+.results-count {
+  font-size: 0.85rem;
+  color: var(--kdas-muted);
+}
+
+.results-count-bold {
+  color: var(--kdas-cyan);
+}
+
+@media (max-width: 600px) {
+  .category-tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+    padding-bottom: 4px;
+  }
+
+  .category-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .filter-tab {
+    flex-shrink: 0;
+  }
+
+  .category-controls {
+    width: 100%;
+    justify-content: space-between;
+  }
+}

@@ -1,0 +1,150 @@
+.hero-section {
+  background-color: #12171c;
+  padding: 50px 24px 36px;
+  border-bottom: 1px solid var(--kdas-border);
+}
+
+.hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  align-items: center;
+}
+
+
+
+.hero-tag-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--kdas-pink);
+}
+
+.hero-title {
+  font-size: clamp(1.8rem, 5vw, 3.2rem);
+  font-weight: 900;
+  line-height: 1.15;
+  margin: 0 0 16px 0;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+}
+
+.hero-cyan-text {
+  color: var(--kdas-cyan);
+}
+
+.hero-description {
+  color: var(--kdas-muted);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  max-width: 520px;
+  margin: 0 0 28px 0;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.hero-btn-primary {
+  background-color: var(--kdas-cyan);
+  color: #0b1116;
+  font-weight: 700;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 24px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+}
+
+.hero-btn-primary:hover {
+  opacity: 0.9;
+}
+
+.hero-btn-accent {
+  background-color: var(--kdas-pink);
+  color: #ffffff;
+  font-weight: 700;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 20px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+}
+
+.hero-btn-accent:hover {
+  opacity: 0.9;
+}
+
+
+
+
+
+
+
+
+
+.hero-featured-old-price {
+  font-size: 0.9rem;
+  color: var(--kdas-muted);
+  text-decoration: line-through;
+}
+
+.hero-benefits-ribbon {
+  max-width: 1200px;
+  margin: 40px auto 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 28px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.hero-benefit-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-benefit-title {
+  font-weight: bold;
+  font-size: 0.88rem;
+  color: #fff;
+}
+
+.hero-benefit-desc {
+  color: var(--kdas-muted);
+  font-size: 0.78rem;
+}
+
+@media (max-width: 600px) {
+  .hero-section {
+    padding: 36px 16px 24px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-btn-primary,
+  .hero-btn-accent {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-benefits-ribbon {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero-benefits-ribbon {
+    grid-template-columns: 1fr;
+  }
+}

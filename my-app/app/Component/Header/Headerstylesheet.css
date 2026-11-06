@@ -1,0 +1,229 @@
+.HeadersProperty {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 12px 24px;
+    background-color: #00b0e0;
+    box-sizing: border-box;
+    position: sticky;
+    top: 0;
+    z-index: 40;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.ContainerLogo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.Logo {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    background-color: #373b3e;
+    padding: 8px 16px;
+    border-radius: 6px;
+    color: #d3f8d5;
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
+    display: inline-block;
+}
+
+.LogoTagline {
+    font-size: 0.75rem;
+    color: #12171c;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.Navigator {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.GapsRightMatters {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.GapsRightMatters::-webkit-scrollbar {
+    display: none;
+}
+
+.NavLink {
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 6px;
+    color: #ffffff;
+    background-color: rgba(25, 30, 36, 0.4);
+    border-bottom: 3px solid #e12885;
+    padding: 8px 14px;
+    display: inline-block;
+    font-size: 0.95rem;
+    transition: background-color 0.2s ease, transform 0.1s ease, border-color 0.2s ease;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.NavLink:hover {
+    background-color: #e12885;
+    border-bottom-color: #ffffff;
+}
+
+.NavLink:active {
+    background-color: #b01b64;
+    transform: translateY(1px);
+}
+
+.NavLink:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 3px;
+}
+
+.HeaderControls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.HeaderSearch {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.HeaderSearchInput {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 2px solid transparent;
+    border-radius: 20px;
+    padding: 7px 14px 7px 34px;
+    font-size: 0.88rem;
+    color: #111;
+    width: 170px;
+    transition: width 0.25s ease, border-color 0.2s ease, background-color 0.2s ease;
+    outline: none;
+}
+
+.HeaderSearchInput:focus {
+    width: 220px;
+    background-color: #ffffff;
+    border-color: #e12885;
+}
+
+.SearchIcon {
+    position: absolute;
+    left: 10px;
+    width: 16px;
+    height: 16px;
+    color: #4a5568;
+    pointer-events: none;
+}
+
+.CartButton {
+    background-color: #373b3e;
+    color: #ffffff;
+    border: 2px solid #e12885;
+    padding: 7px 15px;
+    border-radius: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 0.92rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.CartButton:hover {
+    background-color: #e12885;
+}
+
+.CartButton:active {
+    transform: scale(0.96);
+}
+
+.CartButton:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 2px;
+}
+
+.CartBadge {
+    background-color: #e12885;
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 999px;
+    border: 1px solid #ffffff;
+}
+
+.CartButton:hover .CartBadge {
+    background-color: #373b3e;
+    color: #d3f8d5;
+}
+
+@media (max-width: 768px) {
+    .HeadersProperty {
+        padding: 10px 16px;
+    }
+
+    .Navigator {
+        width: 100%;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .GapsRightMatters {
+        width: 100%;
+        overflow-x: auto;
+        padding-bottom: 2px;
+    }
+
+    .HeaderControls {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .HeaderSearch {
+        flex: 1;
+    }
+
+    .HeaderSearchInput {
+        width: 100%;
+    }
+
+    .HeaderSearchInput:focus {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .HeadersProperty {
+        padding: 8px 12px;
+    }
+
+    .Logo {
+        font-size: 1.25rem;
+        padding: 6px 12px;
+    }
+
+    .NavLink {
+        padding: 6px 10px;
+        font-size: 0.85rem;
+    }
+}

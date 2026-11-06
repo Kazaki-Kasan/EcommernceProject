@@ -1,0 +1,129 @@
+.footer-root {
+  background-color: #0c1015;
+  border-top: 1px solid var(--kdas-border);
+  color: var(--kdas-muted);
+  padding: 50px 24px 28px;
+  margin-top: 60px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-brand-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.footer-logo-badge {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: #373b3e;
+  padding: 6px 14px;
+  border-radius: 6px;
+  color: #d3f8d5;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.footer-logo-tagline {
+  color: var(--kdas-cyan);
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+
+.footer-brand-desc {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  margin: 0 0 16px 0;
+}
+
+.footer-hq-text {
+  font-size: 0.82rem;
+  color: var(--kdas-mint);
+}
+
+.footer-col-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.footer-links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 0.88rem;
+}
+
+.footer-link-item {
+  color: var(--kdas-muted);
+  text-decoration: none;
+}
+
+.footer-link-item:hover {
+  color: var(--kdas-cyan);
+}
+
+.footer-link-pink {
+  color: var(--kdas-pink);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer-info-item {
+  color: var(--kdas-muted);
+}
+
+.footer-trust-desc {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+.footer-payment-badges {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.footer-payment-pill {
+  background-color: var(--kdas-surface);
+  border: 1px solid var(--kdas-border);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  color: #fff;
+}
+
+.footer-bottom-bar {
+  max-width: 1200px;
+  margin: 0 auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.8rem;
+}
+
+.footer-legal-links {
+  display: flex;
+  gap: 16px;
+}
+

@@ -1,0 +1,254 @@
+.quickview-dialog {
+  border: 1px solid var(--kdas-border);
+  border-radius: 8px;
+  background-color: var(--kdas-surface);
+  color: var(--kdas-text);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5);
+  max-width: 600px;
+  width: 92vw;
+  max-height: 90dvh;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+  margin: auto;
+  padding: 0;
+  animation: quickview-appear 0.2s ease-out;
+}
+
+.quickview-dialog::-webkit-scrollbar {
+  display: none;
+}
+
+.quickview-dialog:modal {
+  overscroll-behavior: contain;
+}
+
+.quickview-dialog::backdrop {
+  background: rgba(10, 15, 20, 0.8);
+  backdrop-filter: blur(4px);
+  overflow: hidden;
+  overscroll-behavior: contain;
+}
+
+.quickview-dialog[open] {
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes quickview-appear {
+  from {
+    transform: translateY(8px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.quickview-content {
+  padding: 28px;
+  position: relative;
+}
+
+.quickview-close-btn {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  padding: 6px 12px;
+  background-color: transparent;
+  color: var(--kdas-text);
+  border: 1px solid var(--kdas-border);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.quickview-close-btn:hover {
+  border-color: var(--kdas-cyan);
+}
+
+.quickview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  align-items: center;
+}
+
+.quickview-img-box {
+  background-color: #182028;
+  position: relative;
+  aspect-ratio: 1 / 0.85;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  height: 240px;
+  padding: 16px;
+}
+
+.quickview-img-inner {
+  width: 140px;
+  height: 140px;
+}
+
+.quickview-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background-color: var(--kdas-pink);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+}
+
+.quickview-category {
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  color: var(--kdas-cyan);
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+.quickview-title {
+  font-size: 1.35rem;
+  font-weight: bold;
+  margin: 0 0 8px 0;
+}
+
+.quickview-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.quickview-rating {
+  color: #ffd166;
+  font-size: 0.9rem;
+}
+
+.quickview-reviews {
+  color: var(--kdas-muted);
+  font-size: 0.85rem;
+}
+
+.quickview-stock {
+  color: var(--kdas-mint);
+  font-size: 0.85rem;
+  margin-left: auto;
+}
+
+.quickview-price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.quickview-price {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--kdas-cyan);
+}
+
+.quickview-original-price {
+  font-size: 0.95rem;
+  color: var(--kdas-muted);
+  text-decoration: line-through;
+}
+
+.quickview-desc {
+  color: var(--kdas-muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+.quickview-specs-box {
+  margin-bottom: 20px;
+}
+
+.quickview-specs-title {
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: var(--kdas-text);
+  margin-bottom: 6px;
+}
+
+.quickview-specs-list {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--kdas-muted);
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+.quickview-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.quickview-qty-group {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--kdas-border);
+  border-radius: 6px;
+  background-color: var(--kdas-surface-elevated);
+}
+
+.quickview-qty-btn {
+  padding: 8px 12px;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.quickview-qty-val {
+  padding: 0 10px;
+  font-weight: bold;
+}
+
+.quickview-add-btn {
+  background-color: var(--kdas-cyan);
+  color: #0b1116;
+  font-weight: 700;
+  border: none;
+  border-radius: 6px;
+  padding: 12px;
+  flex: 1;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: opacity 0.15s ease;
+}
+
+.quickview-add-btn:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 600px) {
+  .quickview-dialog {
+    width: 95vw;
+    max-height: 92dvh;
+  }
+
+  .quickview-content {
+    padding: 20px 16px;
+  }
+
+  .quickview-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .quickview-img-box {
+    height: 180px;
+  }
+}
+
